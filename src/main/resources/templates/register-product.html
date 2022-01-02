@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.0.1/css/bootstrap.min.css}">
+	<title>Java Store</title>
+</head>
+<body style="padding: 20px;" class="text-center">
+	
+	<br>
+	<form th:action="@{/product/register-product}" th:method="post" class="form-group">
+		<label><input type="text" name="productName" placeholder="Product name" class="form-control" autofocus/></label>
+		<br>
+		<br>
+		<label><input type="text" name="barCode" placeholder="Bar code" class="form-control"/></label>
+		<br>
+		<br>
+		<label><input type="text" name="manufacturer" placeholder="Manufacturer" class="form-control"/></label>
+		<br>
+		<br>
+		<label><input type="number" name="price" placeholder="Price" class="form-control"/></label>
+		<br>
+		<br>
+		<label><input type="date" name="warranty" placeholder="Warranty" class="form-control"/></label>
+		<br>
+		<br>
+		<label>Category 
+			<select name="category" class="form-control">
+				<option value="ACTION">Action</option>
+				<option value="ADVENTURE">Adventure</option>
+				<option value="STRATEGY">Strategy</option>
+				<option value="RPG">RPG</option>
+				<option value="SPORT">Sport</option>
+				<option value="RACE">Race</option>
+			</select>
+		</label>
+		<br>
+		<br>
+		<button type="submit" class="btn btn-success ps-5 pe-5">Register Product</button>
+	</form>
+	<br>
+	
+	<script th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script th:src="@{/webjars/popper.js/2.9.2/umd/popper.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/5.0.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
